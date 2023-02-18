@@ -42,6 +42,8 @@ if(args.rules){
 	process.exit(0)
 }
 
+import "JSON"
+
 var choice = args._[0]
 var out = rpsls(choice)
-console.log(out)
+console.log(JSON.stringify(out))

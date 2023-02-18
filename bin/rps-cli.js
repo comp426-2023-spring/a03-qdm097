@@ -36,6 +36,8 @@ if(args.rules){
 	process.exit(0)
 }
 
+import "JSON"
+
 var choice = args._[0]
 var out = rps(choice)
-console.log(out)
+console.log(JSON.stringify(out))
