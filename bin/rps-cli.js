@@ -33,6 +33,7 @@ if(args.rules){
 		  - Paper COVERS Rock
 		  - Rock CRUSHES Scissors
 	`)
+	process.exit(0)
 }
 
 var choice = args._[0]
