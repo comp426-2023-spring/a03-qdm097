@@ -21,7 +21,7 @@ Examples:
   node-rpsls        Return JSON with single player RPSLS result.
                     e.g. {"player":"rock"}
   node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
-                    e.g {"player":"rock","opponent":"Spock","result":"lose"}               `)
+                    e.g {"player":"rock","opponent":"Spock","result":"lose"}`)
         process.exit(0)
 }
 if(args.rules){
@@ -37,8 +37,8 @@ if(args.rules){
   - Lizard EATS Paper
   - Paper DISPROVES Spock
   - Spock VAPORIZES Rock
-  - Rock CRUSHES Scissors
-		`)
+  - Rock CRUSHES Scissors`
+)
 	process.exit(0)
 }
 
