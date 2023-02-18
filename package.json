@@ -1,0 +1,29 @@
+{
+  "name": "rpsls",
+  "version": "0.0.1",
+  "description": "rock paper scissors",
+  "main": "./lib/rpsls.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a03-qdm097.git"
+  },
+  "author": "qdm097",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a03-qdm097/issues"
+  },
+  "bin": {
+    "node-rps": "./bin/rps-cli.js",
+    "node-rpsls": "./bin/rpsls-cli.js"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a03-qdm097#readme",
+  "dependencies": {
+    "Math": "^0.0.1-security",
+    "mathjs": "^11.5.1",
+    "minimist": "^1.2.8"
+  }
+}
