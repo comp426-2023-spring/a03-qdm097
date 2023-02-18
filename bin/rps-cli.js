@@ -4,13 +4,13 @@ import {rps} from "../lib/rpsls.js"
 import minimist from 'minimist'
 
 const args = minimist(process.argv.slice(2), {
-	boolean: ['help', 'rules'],
-	alias: {
-		h: 'help', r: 'rules'
-	}
+        boolean: ['help', 'rules'],
+        alias: {
+                h: 'help', r: 'rules'
+        }
 })
-if(args.help){
-	console.log(
+function log_help(){
+console.log(
 `Usage: node-rps [SHOT]
 Play Rock Paper Scissors (RPS)
 
@@ -19,25 +19,40 @@ Play Rock Paper Scissors (RPS)
 
 Examples:
   node-rps        Return JSON with single player RPS result.
-		  e.g. {"player":"rock"}
+                  e.g. {"player":"rock"}
   node-rps rock   Return JSON with results for RPS played against a simulated opponent.
-		  e.g {"player":"rock","opponent":"scissors","result":"win"}`
-)
-	process.exit(0)
+                  e.g {"player":"rock","opponent":"scissors","result":"win"}`)
+
 }
-if(args.rules){
-	console.log(
+if(args.help){
+        log_help()
+        process.exit(0)
+}
+
+function log_rules(){
+console.log(
 `Rules for Rock Paper Scissors:
 
   - Scissors CUTS Paper
   - Paper COVERS Rock
   - Rock CRUSHES Scissors`
 )
-	process.exit(0)
+}
+
+if(args.rules){
+        log_rules()
+        process.exit(0)
 }
 
 import "JSON"
 
 var choice = args._[0]
-var out = rps(choice)
+try{
+        var out = rps(choice)
+}
+catch{
+        log_help()
+        log_rules()
+        process.exit(0)
+}
 console.log(JSON.stringify(out))

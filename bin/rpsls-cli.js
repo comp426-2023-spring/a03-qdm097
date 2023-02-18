@@ -9,8 +9,8 @@ const args = minimist(process.argv.slice(2), {
                 h: 'help', r: 'rules'
         }
 })
-if(args.help){
-        console.log(
+function log_help(){
+console.log(
 `Usage: node-rpsls [SHOT]
 Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
 
@@ -22,10 +22,15 @@ Examples:
                     e.g. {"player":"rock"}
   node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
                     e.g {"player":"rock","opponent":"Spock","result":"lose"}`)
-        process.exit(0)
+ 
 }
-if(args.rules){
-        console.log(
+if(args.help){
+	log_help()
+	process.exit(0)
+}
+
+function log_rules(){
+console.log(
 `Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
 
   - Scissors CUTS Paper
@@ -39,11 +44,22 @@ if(args.rules){
   - Spock VAPORIZES Rock
   - Rock CRUSHES Scissors`
 )
+}
+
+if(args.rules){
+	log_rules()
 	process.exit(0)
 }
 
 import "JSON"
 
 var choice = args._[0]
-var out = rpsls(choice)
+try{
+	var out = rpsls(choice)
+}
+catch{
+	log_help()
+	log_rules()
+	process.exit(0)
+}
 console.log(JSON.stringify(out))
