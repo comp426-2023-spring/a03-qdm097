@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import {rps} from "../lib/rpsls.js"
+import {rpsls} from "../lib/rpsls.js"
 import minimist from 'minimist'
 
 const args = minimist(process.argv.slice(2), {
@@ -37,5 +37,5 @@ if(args.rules){
 }
 
 var choice = args._[0]
-var out = rps(choice)
+var out = rpsls(choice)
 console.log(out)
