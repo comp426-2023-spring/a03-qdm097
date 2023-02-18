@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import {rps, rpsls} from "/lib/rpsls.js"
+import {rps} from "../lib/rpsls.js"
 import minimist from 'minimist'
 
 const args = minimist(process.argv.slice(2), {
@@ -34,3 +34,7 @@ if(args.rules){
 		  - Rock CRUSHES Scissors
 	`)
 }
+
+var choice = args._[0]
+var out = rps(choice)
+console.log(out)

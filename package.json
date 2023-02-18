@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/comp426-2023-spring/a03-qdm097#readme",
   "dependencies": {
+    "json": "^11.0.0",
+    "JSON": "^1.0.0",
     "Math": "^0.0.1-security",
     "mathjs": "^11.5.1",
     "minimist": "^1.2.8"
