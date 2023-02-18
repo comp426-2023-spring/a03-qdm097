@@ -26,8 +26,8 @@ Examples:
 	process.exit(0)
 }
 if(args.rules){
-	console.log(`
-Rules for Rock Paper Scissors:
+	console.log(
+`Rules for Rock Paper Scissors:
 
   - Scissors CUTS Paper
   - Paper COVERS Rock

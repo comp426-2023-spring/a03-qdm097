@@ -10,8 +10,8 @@ const args = minimist(process.argv.slice(2), {
         }
 })
 if(args.help){
-        console.log(`
-Usage: node-rpsls [SHOT]
+        console.log(
+`Usage: node-rpsls [SHOT]
 Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
 
   -h, --help        display this help message and exit
@@ -25,8 +25,8 @@ Examples:
         process.exit(0)
 }
 if(args.rules){
-        console.log(`
-Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+        console.log(
+`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
 
   - Scissors CUTS Paper
   - Paper COVERS Rock
