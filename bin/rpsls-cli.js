@@ -58,6 +58,7 @@ try{
 	var out = rpsls(choice)
 }
 catch{
+	log_help()
 	log_rules()
 	process.exit(0)
 }
