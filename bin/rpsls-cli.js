@@ -56,9 +56,9 @@ import "JSON"
 var choice = args._[0]
 try{
 	var out = rpsls(choice)
+	console.log(JSON.stringify(out))
 }
 catch{
 	log_rules()
 	process.exit(0)
 }
-console.log(JSON.stringify(out))
